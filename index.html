@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>باحث الصور الذكي</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <nav>
+        <div class="logo">باحث الصور الذكي</div>
+        <div class="theme-switch">
+            <i class="fas fa-moon"></i>
+        </div>
+    </nav>
+
+    <main>
+        <div class="container">
+            <h1>ابحث عن الصور التي تريدها</h1>
+            <p class="subtitle">اكتشف ملايين الصور من Pinterest</p>
+
+            <div class="search-section">
+                <input type="text" id="searchInput" placeholder="ابحث عن صور...">
+                <button id="searchBtn" class="primary-btn">
+                    <i class="fas fa-search"></i>
+                    بحث
+                </button>
+            </div>
+
+            <div class="filters">
+                <select id="sortOrder">
+                    <option value="relevance">الأكثر صلة</option>
+                    <option value="recent">الأحدث</option>
+                </select>
+            </div>
+
+            <div id="imageGrid" class="image-grid"></div>
+
+            <div id="loading" class="loading hidden">
+                <div class="spinner"></div>
+                <p>جاري البحث...</p>
+            </div>
+
+            <button id="loadMoreBtn" class="secondary-btn hidden">
+                تحميل المزيد
+            </button>
+        </div>
+    </main>
+
+    <div id="imageModal" class="modal">
+        <span class="close-modal">&times;</span>
+        <img id="modalImage" src="/placeholder.svg" alt="صورة مكبرة">
+        <div class="modal-content">
+            <h3 id="modalTitle"></h3>
+            <p id="modalDescription"></p>
+            <a id="modalLink" target="_blank" rel="noopener noreferrer" class="primary-btn">
+                <i class="fas fa-external-link-alt"></i>
+                عرض على Pinterest
+            </a>
+        </div>
+    </div>
+
+    <footer>
+        <p>جميع الحقوق محفوظة &copy; 2024 باحث الصور الذكي</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
